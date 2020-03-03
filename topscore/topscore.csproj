@@ -83,5 +83,14 @@
   <ItemGroup>
     <None Include="Resources\awesome-ocean-background-vector.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-tournaments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
