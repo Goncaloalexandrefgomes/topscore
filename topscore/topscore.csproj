@@ -93,5 +93,10 @@
   <ItemGroup>
     <None Include="Resources\timer.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Record.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,6 +11,7 @@ namespace topscore
             InitializeComponent();
             alvo.Visible = false;
             timer1.Interval = 1000;
+            record.Text 
         }
 
         private mover Classe = new mover();
