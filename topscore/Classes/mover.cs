@@ -6,7 +6,7 @@ namespace topscore.Classes
 {
     class mover
     {
-        private bool _start = false;
+        private bool _start = true;
         private bool Start => _start;
 
         public void Mover(object sender)
@@ -25,6 +25,22 @@ namespace topscore.Classes
             int _tempo = Convert.ToInt32(tempo);
             if (_tempo > 0) _tempo--; else _start = false;
             return _tempo.ToString();
+        }
+
+        public void Record(object pontos, object record)
+        {
+            TextBox _pontos = (TextBox)pontos;
+            TextBox _record = (TextBox)record;
+
+            int _rec = Convert.ToInt32(_record.Text);
+            int _pts = Convert.ToInt32(_pontos.Text);
+            if (_rec < _pts) _record.Text = _pontos.Text;
+        }
+
+        public void Pontos(object sender)
+        {
+            TextBox _pontos1 = (TextBox)sender;
+            _pontos1.Text = (Convert.ToInt32(_pontos1.Text) + 1).ToString();
         }
     }
 }

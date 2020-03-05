@@ -9,6 +9,7 @@ namespace topscore
         public Form1()
         {
             InitializeComponent();
+            alvo.Visible = false;
             timer1.Interval = 1000;
         }
 
@@ -16,7 +17,7 @@ namespace topscore
 
         private void Alvo_Click(object sender, EventArgs e)
         {
-            pontos.Text = (Convert.ToInt32(pontos.Text) + 1).ToString();
+            Classe.Pontos(pontos);
             Classe.Mover(sender);
         }
 
@@ -34,8 +35,7 @@ namespace topscore
             button1.Text = "START!";
             timer1.Stop();
             alvo.Visible = false;
-            if (Convert.ToInt32(record.Text) < Convert.ToInt32(pontos.Text))
-                record.Text = pontos.Text;
+            Classe.Record(pontos, record);
         }
 
 
